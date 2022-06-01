@@ -9,9 +9,6 @@ const app = express();
 
 app.use(logger);
 
-app.get("/", (req, res) => {
-  res.send("hello ");
-});
 
 app.get("/Person", validator(), (req, res) => {
   res.status(200).json({
