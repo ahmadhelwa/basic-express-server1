@@ -1,6 +1,7 @@
 'use strict';
 const logger = require('../src/middleware/ logger');
 
+
 describe('logger middleware', () => {
 
     let consoleSpy;
@@ -13,6 +14,7 @@ describe('logger middleware', () => {
         consoleSpy = jest.spyOn(console, 'log');
     });
 
+    
     test('it is logging something or routes', () => {
         logger(req, res, next);
         expect(consoleSpy).toHaveBeenCalled();
@@ -20,6 +22,8 @@ describe('logger middleware', () => {
     test('it is calling next', () => {
         expect(next).toHaveBeenCalled();
     });
-
+    afterEach(() => {
+        consoleSpy.Restore 
+    });
    
 })

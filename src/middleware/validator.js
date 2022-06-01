@@ -7,7 +7,7 @@ function validator() {
 
     if (regx.test(name)) {
       next();
-    } else if (name === " ") {
+    } else if (name === "") {
       next("name is empty");
     } else if (!regx.test(name)) {
       next("showld be valid name");
