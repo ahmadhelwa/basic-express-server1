@@ -3,7 +3,6 @@ const server = require("../src/server");
 const supertest = require("supertest");
 const request = supertest(server.app);
 describe('Server Test', () => {
-    let next = jest.fn();
     
     it(' return 200', async () => {
       const response = await request.get('/person?name=string');
