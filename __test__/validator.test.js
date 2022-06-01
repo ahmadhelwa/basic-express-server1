@@ -1,6 +1,6 @@
-'use strict';
-const supertest = require('supertest');
+'use strict'
 const server = require('../src/server');
+const supertest = require('supertest');
 const request = supertest(server.app);
 describe('validator Test', () => {
     it(' the name is string ', async () => {
